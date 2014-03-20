@@ -1,9 +1,22 @@
 {
-	"name": "ErikAkersGruntProject",
-	"version": "0.1",
-	"dependencies": {},
-	"devDependencies": {},
-	"engines": {
-		"node": ">=0.8.0"
-	}
+  "name": "GruntProject",
+  "version": "0.1.0",
+  "description": "Just trying to make my grunt organization a little cleaner.",
+  "repository": {
+    "type": "git",
+    "url": "https://erikakers@github.com/erikakers/grunt.git"
+  },
+  "keywords": [
+    "Grunt",
+    "Node"
+  ],
+  "author": "Erik Akers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikakers/grunt/issues"
+  },
+  "homepage": "https://github.com/erikakers/grunt",
+  "devDependencies": {
+    "grunt": "^0.4.4"
+  }
 }
