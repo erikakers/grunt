@@ -18,6 +18,9 @@
   "homepage": "https://github.com/erikakers/grunt",
   "devDependencies": {
     "grunt": "^0.4.4",
-    "grunt-contrib-watch": "^0.6.1"
+    "glob": "^3.2.9",
+    "time-grunt": "^0.3.1",
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-contrib-compass": "^0.7.2"
   }
 }
