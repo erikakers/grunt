@@ -3,6 +3,24 @@
 'use strict';
 
 module.exports = function(grunt) {
+
+	require('time-grunt')(grunt);
+	require('load-grunt-tasks')(grunt);
+	grunt.template.addDelimiters('custom', '{%', '%}');
+
+	function loadConfig(path) {
+		var glob = require('glob');
+		var object = {};
+		var key;
+
+		glob.sync('*', {cwd: path}).forEach(function(option) {
+			key = option.replace(/\.js$/,'');
+			object[key] = require(path + option);
+		});
+
+		return object;
+	}
+
 	var config = {
 		pkg: grunt.file.readJSON('package.json'),
 		bowerrc: grunt.file.readJSON('.bowerrc'),
@@ -13,14 +31,15 @@ module.exports = function(grunt) {
 			' * <%= grunt.template.today("yyyy-mm-dd") %>\n' +
 			' */\n\n',
 
-		base = {
+		config: {
 			src: 'src',
 			build: 'app',
-			dist: 'dist'
+			dist: 'dist',
 			vendor: '<%= bowerrc.directory %>'
 		}
-	// The rest of the confirations are loaded in via `loadConfig`
 	};
 
+	grunt.util._.extend(config, loadConfig('./tasks/options/'));
+	grunt.initConfig(config);
 	grunt.loadTasks('tasks');
 };
