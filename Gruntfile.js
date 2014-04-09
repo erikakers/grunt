@@ -1,5 +1,4 @@
 // http://www.thomasboyt.com/2013/09/01/maintainable-grunt.html
-
 'use strict';
 
 module.exports = function(grunt) {
@@ -39,7 +38,7 @@ module.exports = function(grunt) {
 		}
 	};
 
-	grunt.util._.extend(config, loadConfig('./tasks/options/'));
+	grunt.util._.extend(config, loadConfig('./grunt/tasks/'));
 	grunt.initConfig(config);
-	grunt.loadTasks('tasks');
+	grunt.loadTasks('grunt');
 };
