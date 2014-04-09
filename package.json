@@ -21,7 +21,7 @@
     "glob": "^3.2.9",
     "time-grunt": "^0.3.1",
     "load-grunt-tasks": "^0.4.0",
-    "grunt-contrib-compass": "^0.7.2",
-    "grunt-contrib-sass": "^0.7.3"
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-concat": "^0.4.0"
   }
 }
