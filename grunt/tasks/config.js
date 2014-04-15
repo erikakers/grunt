@@ -1,7 +1,5 @@
-/*
-	Sets global config path options for use in the options folder.
-	Added @0.0.1
- */
+'use strict';
+
 module.exports = {
 	src: 'src',
 	app: 'app',
