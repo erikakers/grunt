@@ -10,7 +10,6 @@ module.exports = {
 		options: {
 			open: false,
 			base: [
-				'.tmp',
 				'<%= config.app %>'
 			]
 		}
@@ -18,7 +17,6 @@ module.exports = {
 	test: {
 		options: {
 			base: [
-				'.tmp',
 				'test',
 				'<%= config.app %>'
 			]

@@ -3,7 +3,7 @@ module.exports = {
 		options: {
 			sourcemap: true,
 			loadPath: [
-				'<%= config.vendor %>/foundation/scss'
+				//'<%= config.vendor %>/foundation/scss'
 			]
 		},
 		files: [{

@@ -1,9 +1,9 @@
 module.exports = {
 	server: [
 		'sass:dev',
-		'browserify:dev',
-		'browserify:vendor',
-		'i18n',
+		//'browserify:dev',
+		//'browserify:vendor',
+		//'i18n',
 		'copy:styles',
 		'copy:dump'
 	],

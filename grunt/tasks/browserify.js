@@ -2,7 +2,7 @@
 module.exports = {
 	vendor: {
 		src: [
-			'<%= config.vendor %>/jquery/jquery.js',
+			'<%= config.vendor %>/jquery/dist/jquery.js',
 			'<%= config.vendor %>/lodash/dist/lodash.js',
 			'<%= config.vendor %>/backbone/backbone.js'
 		],
