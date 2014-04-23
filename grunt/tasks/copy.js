@@ -14,13 +14,6 @@ module.exports = {
 			]
 		}]
 	},
-	styles: {
-		expand: true,
-		dot: true,
-		cwd: '<%= config.app %>/styles',
-		dest: '.tmp/styles/',
-		src: '{,*/}*.css'
-	},
 	dump: {
 		files: [{
 			expand: false,
