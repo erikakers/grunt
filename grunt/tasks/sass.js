@@ -10,7 +10,7 @@ module.exports = {
 			expand: true,
 			cwd: '<%= config.src %>/scss/',
 			src: ['*.scss'],
-			dest: '<%= config.app %>/css/',
+			dest: '<%= config.app %>/styles/',
 			ext: '.css'
 		}]
 	}
