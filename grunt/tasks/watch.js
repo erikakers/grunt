@@ -4,12 +4,12 @@ module.exports = {
 		files: ['Gruntfile.js']
 	},
 	sass: {
-		files: ['<%= config.app %>/scss/{,*/}*.{scss,sass}'],
-		tasks: ['sass:dev', 'autoprefixer']
+		files: ['<%= config.src %>/scss/{,*/}*.{scss,sass}'],
+		tasks: ['sass:dev']
 	},
 	styles: {
 		files: ['<%= config.app %>/styles/{,*/}*.css'],
-		tasks: ['newer:copy:styles', 'autoprefixer']
+		tasks: ['autoprefixer']
 	},
 	browserify: {
 		files: ['<%= config.app %>/scripts/**/*.js', 'test/{,*/}*.js'],
@@ -25,7 +25,7 @@ module.exports = {
 		},
 		files: [
 			'<%= config.app %>/**/*.html',
-			'.tmp/styles/{,*/}*.css',
+			'<%= config.app %>/styles/{,*/}*.css',
 			'{.tmp,<%= config.app %>}/scripts/{,*/}*.js',
 			'<%= config.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
 		]
