@@ -4,8 +4,8 @@ module.exports = {
 		//'browserify:dev',
 		//'browserify:vendor',
 		//'i18n',
-		'copy:styles',
-		'copy:dump'
+		//'copy:styles',
+		//'copy:dump'
 	],
 	test: [
 		'copy:styles',
