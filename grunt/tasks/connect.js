@@ -1,32 +1,34 @@
-'use strict';
-
-var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
-var mountFolder = function (connect, dir) {
-    return connect.static(require('path').resolve(dir));
-};
-
+// connect task options
 module.exports = {
 	options: {
 		port: 9000,
+		livereload: 35731,
+		// change this to '0.0.0.0' to access the server from outside
 		hostname: 'localhost'
 	},
 	livereload: {
 		options: {
-			middleware: function (connect) {
-				return [
-					lrSnippet,
-					mountFolder(connect, config.app),
-				];
-			}
+			open: false,
+			base: [
+				'.tmp',
+				'<%= config.app %>'
+			]
+		}
+	},
+	test: {
+		options: {
+			base: [
+				'.tmp',
+				'test',
+				'<%= config.app %>'
+			]
 		}
 	},
 	dist: {
 		options: {
-			middleware: function (connect) {
-				return [
-					mountFolder(connect, config.dist)
-				];
-			}
+			open: true,
+			base: '',
+			livereload: false
 		}
 	}
-}
+};
