@@ -15,5 +15,26 @@ module.exports = {
 				];
 			}
 		}
+	},
+	test: {
+		options: {
+			open: false,
+			port: 9001,
+			middleware: function(connect) {
+				return [
+					connect.static('test'),
+					connect.static('app'),
+					connect().use('/bower_components', connect.static('./bower_components'))
+				];
+			}
+		}
+	},
+	dist: {
+		options: {
+			open: true,
+			port: 9080,
+			base: '<%= config.dist %>',
+			keepalive: true
+		}
 	}
 };
