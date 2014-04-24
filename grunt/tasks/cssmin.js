@@ -1,10 +1,9 @@
 module.exports = {
 	dist: {
-		 files: {
-			 '/styles/main.css': [
-				 '.tmp/styles/{,*/}*.css',
-				 '/styles/{,*/}*.css'
-			 ]
-		 }
+		files: {
+			'<%= config.dist %>/styles/app.min.css': [
+				'<%= config.temp %>/styles/tidy.css'
+			]
+		}
 	}
 };
