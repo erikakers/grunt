@@ -1,4 +1,3 @@
-// clean task options
 module.exports = {
 	dist: {
 		files: [{
@@ -9,5 +8,10 @@ module.exports = {
 			]
 		}]
 	},
-	server: ['.tmp', '<%= config.app %>/localehtml']
+	temp: {
+		files: [{
+			dot: true,
+			src: '<%= config.temp %>'
+		}]
+	}
 };
