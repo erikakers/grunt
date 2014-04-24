@@ -3,7 +3,9 @@ module.exports = {
 		options: {
 			sourcemap: true,
 			loadPath: [
-				//'<%= config.vendor %>/foundation/scss'
+				// Samples for adding other SCSS libraries
+				'<%= config.vendor %>/foundation/scss/',
+				'<%= config.vendor %>/bourbon/app/assets/stylesheets'
 			]
 		},
 		files: [{
