@@ -5,15 +5,19 @@ module.exports = {
 	},
 	sass: {
 		files: ['<%= config.src %>/scss/{,*/}*.{scss,sass}'],
-		tasks: ['sass:dev']
+		tasks: ['sass:dev', 'autoprefixer']
 	},
-	browserify: {
-		files: ['<%= config.app %>/scripts/**/*.js', 'test/{,*/}*.js'],
-		tasks: ['browserify:dev', 'concat:dev', 'i18n']
+	javascript: {
+		files: ['<%= config.src %>/javascript/{,*/}*.js'],
+		tasks: ['concat:dev', 'jshint', 'react']
+	},
+	react: {
+		files: ['<%= config.src %>/javascript/jsx/{,*/}*.jsx'],
+		tasks: ['react']
 	},
 	mocha: {
 		files: ['test/{,*/}*.js'],
-		tasks: ['browserify:test', 'mocha']
+		tasks: ['mocha']
 	},
 	livereload: {
 		options: {
