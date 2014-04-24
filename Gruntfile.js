@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 		}
 	};
 
-	grunt.util._.extend(config, loadConfig('./grunt/tasks/'));
+	grunt.util._.extend(config, loadConfig('./grunt/options/'));
 	grunt.initConfig(config);
 	grunt.loadTasks('grunt');
 };
