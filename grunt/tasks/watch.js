@@ -7,10 +7,6 @@ module.exports = {
 		files: ['<%= config.src %>/scss/{,*/}*.{scss,sass}'],
 		tasks: ['sass:dev']
 	},
-	styles: {
-		files: ['<%= config.app %>/styles/{,*/}*.css'],
-		tasks: ['autoprefixer']
-	},
 	browserify: {
 		files: ['<%= config.app %>/scripts/**/*.js', 'test/{,*/}*.js'],
 		tasks: ['browserify:dev', 'concat:dev', 'i18n']
