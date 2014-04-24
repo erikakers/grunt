@@ -1,7 +1,7 @@
 // autoprefixer task options
 module.exports = {
 	options: {
-		browsers: ['last 5 version']
+		browsers: ['last 10 version']
 	},
 	dist: {
 		files: [{
