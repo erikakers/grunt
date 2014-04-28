@@ -46,6 +46,9 @@
     "grunt-contrib-sass": "^0.7.3",
     "grunt-uncss": "^0.3.3",
     "grunt-processhtml": "^0.3.3",
-    "grunt-react": "^0.8.2"
+    "grunt-react": "^0.8.2",
+    "grunt-newer": "^0.7.0",
+    "assemble": "^0.4.37",
+    "grunt-prettify": "^0.3.4"
   }
 }
