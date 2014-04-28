@@ -9,11 +9,11 @@ module.exports = {
 	},
 	javascript: {
 		files: ['<%= config.src %>/javascript/{,*/}*.js'],
-		tasks: ['concat:dev', 'jshint', 'react']
+		tasks: ['newer:concat:dev', 'newer:jshint', 'react']
 	},
 	react: {
 		files: ['<%= config.src %>/javascript/jsx/{,*/}*.jsx'],
-		tasks: ['react']
+		tasks: ['newer:react']
 	},
 	mocha: {
 		files: ['test/{,*/}*.js'],
