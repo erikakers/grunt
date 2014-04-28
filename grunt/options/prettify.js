@@ -19,7 +19,6 @@ module.exports = {
 			"pre"
 		]
 	},
-
 	all: {
 		expand: true,
 		cwd: '<%= config.app %>',
