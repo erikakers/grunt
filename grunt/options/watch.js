@@ -3,6 +3,10 @@ module.exports = {
 	gruntfile: {
 		files: ['Gruntfile.js']
 	},
+	assemble: {
+		files: ['<%= config.src %>/html/{,*/}*.hbs'],
+		tasks: ['assemble', 'prettify']
+	},
 	sass: {
 		files: ['<%= config.src %>/scss/{,*/}*.{scss,sass}'],
 		tasks: ['sass:dev', 'autoprefixer']
