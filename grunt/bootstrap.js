@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('bootstrap', [
 			'modernizr',
+			'copy:bootstrap',
 			'concat:vendor'
 	]);
 };
