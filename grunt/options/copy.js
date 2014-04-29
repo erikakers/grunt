@@ -1,32 +1,27 @@
 // copy task options
+// For files that need to be copied should be set up on a per project basis.
+//
 module.exports = {
-	dist: {
-		files: [{
-			expand: true,
-			dot: true,
-			cwd: '<%= config.app %>',
-			dest: '<%= config.dist %>',
-			src: [
-				'*.{ico,png,txt}',
-				'.htaccess',
-				'images/{,*/}*.webp',
-				'styles/fonts/{,*/}*.*'
-			]
-		}]
+	bootstrap: {
+		files: [
+			{
+				src: '<%= base.src %>/packages/html5-boilerplate/robots.txt',
+				dest: '<%=  base.build %>/robots.txt'
+			},
+			{
+				src: '<%= base.src %>/packages/html5-boilerplate/.htaccess',
+				dest: '<%= base.build %>/.htaccess'
+			}
+		]
 	},
-	dump: {
-		files: [{
-			expand: false,
-			src: '.tmp/styles/{,*/}*.css',
-			dest: '<%= config.dotNet %>/css/app.css'
-		}, {
-			expand: false,
-			src: '.tmp/scripts/app.js',
-			dest: '<%= config.dotNet %>/js/app.js'
-		}, {
-			expand: false,
-			src: '<%= config.app %>/images/{,*/}*.*',
-			dest: '<%= config.dotNet/images/'
-		}]
+	dev: {
+		files: [
+
+		]
+	},
+	dist: {
+		files: [
+
+		]
 	}
 };
