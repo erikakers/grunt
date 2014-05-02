@@ -1,4 +1,5 @@
-# A Little Grunt Project [![Build Status](https://travis-ci.org/erikakers/grunt.png?branch=master)](https://travis-ci.org/erikakers/grunt)
+# A Little Grunt Project 
+[![Build Status](https://travis-ci.org/erikakers/grunt.png?branch=master)](https://travis-ci.org/erikakers/grunt) [![devDependency Status](https://david-dm.org/erikakers/grunt/dev-status.svg)](https://david-dm.org/erikakers/grunt#info=devDependencies)
 
 After getting tried of dealing with 500 line Gruntfiles I figured it was time to clean up the process a little bit. Now tasks and options are split into folders and the Gruntfile is just the glue that makes everything work. 
 
