@@ -8,11 +8,14 @@ module.exports = {
 			'mq': true,
 			'cssclasses': true
 		},
-		customTests: [
-			'<%= config.app %>/scripts/{,*/}*.js',
-			'<%= config.app %>/styles/{,*/}*.css',
-			'!<%= config.app %>/scripts/vendor/*'
-		],
+		parseFiles: true,
+		files: {
+			src: [
+				'<%= config.app %>/scripts/{,*/}*.js',
+				'<%= config.app %>/styles/{,*/}*.css',
+				'!<%= config.app %>/scripts/vendor/*'
+			]
+		},
 		uglify: false
 	}
 };
