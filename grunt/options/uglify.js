@@ -10,7 +10,7 @@ module.exports = {
 				'<%= config.app %>/scripts/vendor/head.js'
 			],
 			'<%= config.dist %>/scripts/main.min.js': [
-				'<%= config.app %>/scripts/main.js'
+				'<%= config.temp %>/scripts/main.js'
 			]
 		}
 	}

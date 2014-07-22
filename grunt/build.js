@@ -5,6 +5,7 @@ module.exports = function(grunt) {
 		'clean:dist',
 		'uncss',
 		'processhtml',
+		'removelogging',
 		'cssmin',
 		'htmlmin',
 		'concurrent:dist',
