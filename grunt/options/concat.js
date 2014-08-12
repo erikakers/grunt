@@ -2,17 +2,23 @@ module.exports = {
 	options: {
 		banner: '<%= banner %>'
 	},
-	head: {
+	loader {
 		src: [
-			// Any Shims
+			'<%= config.src %>/javascript/loader/**/*.js'
 		],
-		dest: '<%= config.app %>/scripts/vendor/head.js'
+		dest: '<%= config.src %>/scripts/loader.js'
 	},
 	vendor: {
 		src: [
 			'<%= config.vendor %>/jquery/dist/jquery.js'
 		],
 		dest: '<%= config.app %>/scripts/vendor/plugins.js'
+	},
+	mobile: {
+		src: [
+			'<%= config.vendor %>/fastclick/fastclick.js'
+		],
+		dest: '<%= config.app %>/mobile/vendor/mobile.js'
 	},
 	dev: {
 		src: [
