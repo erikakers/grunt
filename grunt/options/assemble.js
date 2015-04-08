@@ -2,15 +2,15 @@ module.exports = {
 	options: {
 		layoutdir: '<%= config.src %>/html/layouts',
 		partials: [
-		'<%= config.src %>/html/components/{,*/}*.hbs'
-		'<%= config.src %>/html/elements/{,*/}*.hbs'
+			'<%= config.src %>/html/components/{,*/}*.hbs',
+			'<%= config.src %>/html/elements/{,*/}*.hbs'
 			],
 		data: ['<%= config.src %>/html/data/*.{json,yml}'],
 		flatten: true
 	},
 	pages: {
 		options: {
-			layout: 'master.hbs'
+			layout: 'default.hbs'
 		},
 		files: [{
 			'<%= config.app %>/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
@@ -18,10 +18,10 @@ module.exports = {
 	},
 	styleguide: {
 		options: {
-			layout: 'styleguide.hbs'
+			layout: 'blank.hbs'
 		},
 		files: [{
-			'<%= config.app %>/styleguide/': ['<%= config.src %>/html/styleguide/{,*/}*.hbs']
+		'<%= config.app %>/styleguide/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
 		}]
 	}
 };
